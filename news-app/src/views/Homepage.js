@@ -3,10 +3,10 @@ import { useAxiosGet } from "../hooks/HttpRequest";
 import Loader from "../components/Loader";
 import NewsCard from "../components/NewsCard";
 
-function Homepage() {
+function Homepage(props) {
     
-    let country = 'co'
-    const apiKey = '5a24644ba4464f08afa45ba41dabf7a4'
+    let country = props.country
+    const apiKey = props.apiKey
     const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`
 
     let newsList = useAxiosGet(url)
@@ -26,7 +26,7 @@ function Homepage() {
         content = 
         newsList.data.articles.map((article) => 
         // TODO: Generate an id for each article.
-            <div className='p-3' key={article.id}>
+            <div key={article.id}>
                 <NewsCard article = {article}/>
             </div>
         )

@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,12 +7,16 @@ import Homepage from './views/Homepage';
 import NewsDetail from './components/NewsDetail';
 
 function App() {
+
+  let country = 'co'
+  const apiKey = '5a24644ba4464f08afa45ba41dabf7a4'
+
   return (
-    <div className="App">
+    <div>
       <Router>
         <Routes>
           
-          <Route exact path ="/" element = {<Homepage/>}>
+          <Route exact path ="/" element = {<Homepage country={country} apiKey={apiKey}/>}>
           </Route>
 
           {/* TODO: Because the News API does not return an id for each news, create an id generator. */}
