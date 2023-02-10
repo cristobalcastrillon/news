@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from "axios";
+
+axios.interceptors.request.use(
+  config => {
+      console.log(
+          `${config.method.toUpperCase()} request sent to ${config.url} at ${new Date().getTime().toLocaleString()}`
+      )
+      return config
+  },
+  error => {
+      return Promise.reject(error)
+  }
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
