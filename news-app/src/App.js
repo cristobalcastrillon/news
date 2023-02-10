@@ -8,7 +8,7 @@ import NewsDetail from './components/NewsDetail';
 import Login from './views/Login';
 import Signup from './views/Signup';
 import RequestLog from './views/RequestLog';
-import Auth from './views/Auth';
+import Auth from './services/Auth';
 
 function App() {
 

@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Signup() {
+
+    // OJO: ¡Este componente aún no es funcional!
+
     return(
         <div className="flex items-center justify-center h-screen">
             <div className='border rounded overflow-hidden shadow-lg p-3'>
