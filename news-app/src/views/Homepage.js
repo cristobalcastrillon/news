@@ -2,6 +2,7 @@ import React from "react";
 import { useAxiosGet } from "../hooks/HttpRequest";
 import Loader from "../components/Loader";
 import NewsCard from "../components/NewsCard";
+import uuid from 'react-native-uuid';
 
 function Homepage(props) {
     
@@ -23,13 +24,14 @@ function Homepage(props) {
     }
     
     if(newsList.data){
+        let articleCounter = 0
         content = 
         newsList.data.articles.map((article) => 
-        // TODO: Generate an id for each article.
-            <div key={article.id}>
-                <NewsCard article = {article}/>
+            <div key={articleCounter}>
+                <NewsCard article = {article} id = {++articleCounter}/>
             </div>
         )
+        console.log(content)
     }
     
     return(
