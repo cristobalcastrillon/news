@@ -8,7 +8,7 @@ import axios from "axios";
 axios.interceptors.request.use(
   config => {
       console.log(
-          `${config.method.toUpperCase()} request sent to ${config.url} at ${new Date().getTime().toLocaleString()}`
+          `Petición ${config.method.toUpperCase()} hecha a ${config.url} a la(s) ${new Date().toLocaleTimeString()}`
       )
       return config
   },

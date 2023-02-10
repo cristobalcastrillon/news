@@ -4,7 +4,7 @@ function RequestLog(props) {
 
     return(
         <div>
-
+            
         </div>
     )
 }
