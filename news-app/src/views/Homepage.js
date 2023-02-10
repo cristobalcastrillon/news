@@ -50,7 +50,6 @@ function Homepage(props) {
                 <NewsCard article = {article} id = {++articleCounter}/>
             </div>
         )
-        console.log(weatherInfo)
     }
 
     if(weatherInfo.data){

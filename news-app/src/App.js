@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import Homepage from './views/Homepage';
 import NewsDetail from './components/NewsDetail';
+import Login from './views/Login';
+import Signup from './views/Signup';
 
 function App() {
 
@@ -19,11 +21,12 @@ function App() {
           <Route exact path="/"
             element={<Homepage
               newsApiKey={newsApiKey}
-              weatherApiKey={weatherApiKey} />}>
-          </Route>
+              weatherApiKey={weatherApiKey} />}/>
 
-          <Route path="/news/:id" element={<NewsDetail />}>
-          </Route>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
+
+          <Route path="/news/:id" element={<NewsDetail />}/>
 
           {/* <Route path ="/request-log" element = {<Homepage/>}>
           </Route> */}
