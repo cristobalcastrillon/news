@@ -18,12 +18,12 @@ function App() {
         <Routes>
 
           <Route exact path="/" element={<Auth/>}/>
-          <Route exact path="/home" element={<Homepage/>}/>
+          <Route path="/home" element={<Homepage/>}/>
 
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
 
-          <Route path="/news/:id" element={<NewsDetail />}/>
+          <Route path="/home/news/:id" element={<NewsDetail />}/>
 
           <Route path ="/request-log" element = {<RequestLog/>}/>
 
