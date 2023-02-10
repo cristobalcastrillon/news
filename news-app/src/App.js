@@ -8,19 +8,21 @@ import NewsDetail from './components/NewsDetail';
 
 function App() {
 
-  let country = 'co'
-  const apiKey = '5a24644ba4464f08afa45ba41dabf7a4'
+  const newsApiKey = '5a24644ba4464f08afa45ba41dabf7a4'
+  const weatherApiKey = 'f94107df80de82483c65aa2e29cb4eb0'
 
   return (
     <div>
       <Router>
         <Routes>
-          
-          <Route exact path ="/" element = {<Homepage country={country} apiKey={apiKey}/>}>
+
+          <Route exact path="/"
+            element={<Homepage
+              newsApiKey={newsApiKey}
+              weatherApiKey={weatherApiKey} />}>
           </Route>
 
-          {/* TODO: Because the News API does not return an id for each news, create an id generator. */}
-          <Route path ="/news/:id" element = {<NewsDetail/>}>
+          <Route path="/news/:id" element={<NewsDetail />}>
           </Route>
 
           {/* <Route path ="/request-log" element = {<Homepage/>}>

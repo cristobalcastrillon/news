@@ -474,6 +474,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .h-64 {
   height: 16rem;
 }
@@ -484,6 +488,18 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .justify-center {
@@ -511,6 +527,10 @@ video {
   background-size: cover;
 }
 
+.object-none {
+  object-fit: none;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -521,6 +541,15 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
