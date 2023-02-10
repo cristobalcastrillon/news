@@ -4,6 +4,7 @@ function WeatherCard(props) {
     let data = props.data
     let currentWeather = data.current
     let icon = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`
+
     return(
         <div className='max-w-2xl border mb-4 rounded overflow-hidden shadow-lg p-3 flex flex-col'>
             <h1 className='font-bold text-lg text-center'>
@@ -42,6 +43,14 @@ function WeatherCard(props) {
                     
                     <tr>
                         <td className="font-bold">
+                            Temperatura
+                        </td>
+                        <td>
+                            {currentWeather.temp} ºC
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="font-bold">
                             Nubosidad
                         </td>
                         <td>
@@ -61,7 +70,7 @@ function WeatherCard(props) {
                             Amanecer
                         </td>
                         <td>
-                            {Intl.DateTimeFormat('en-US', {hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(currentWeather.sunrise)}
+                            {new Date(currentWeather.sunrise * 1000).toLocaleTimeString("default")}
                         </td>
                     </tr>
                     <tr>
@@ -69,7 +78,7 @@ function WeatherCard(props) {
                             Atardecer
                         </td>
                         <td>
-                            {Intl.DateTimeFormat('en-US', {hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(currentWeather.sunset)}
+                            {new Date(currentWeather.sunset * 1000).toLocaleTimeString("default")}
                         </td>
                     </tr>
                     <tr>

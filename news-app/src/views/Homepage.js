@@ -14,7 +14,7 @@ function Homepage(props) {
     let lat = '3.45'
     let lon = '-76.53'
     const weatherApiKey = props.weatherApiKey
-    const weatherGetURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${weatherApiKey}`
+    const weatherGetURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${weatherApiKey}`
 
     let newsList = useAxiosGet(newsGetURL)
     let weatherInfo = useAxiosGet(weatherGetURL)
