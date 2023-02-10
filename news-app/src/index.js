@@ -7,13 +7,26 @@ import axios from "axios";
 
 axios.interceptors.request.use(
   config => {
-      console.log(
-          `Petición ${config.method.toUpperCase()} hecha a ${config.url} a la(s) ${new Date().toLocaleTimeString()}`
-      )
-      return config
+    // var requests = JSON.parse(localStorage.getItem("httpRequests"))
+    // if (localStorage == null) {
+    //   requests = []
+    // }
+    // let request = {
+    //     "method": `${config.method.toUpperCase()}`,
+    //     "url": `${config.url}`,
+    //     "timestamp": `${new Date().getTime()}`
+    // }
+    // localStorage.setItem("request", JSON.stringify(request))
+    // console.log(requests)
+    // requests.push(request)
+    // localStorage.setItem("httpRequests", JSON.stringify(requests))
+    console.log(
+        `Petición ${config.method.toUpperCase()} hecha a ${config.url} a la(s) ${new Date().toLocaleTimeString()}`
+    )
+    return config
   },
   error => {
-      return Promise.reject(error)
+    return Promise.reject(error)
   }
 )
 
