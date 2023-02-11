@@ -20,9 +20,9 @@ axios.interceptors.request.use(
     // console.log(requests)
     // requests.push(request)
     // localStorage.setItem("httpRequests", JSON.stringify(requests))
-    console.log(
-        `Petición ${config.method.toUpperCase()} hecha a ${config.url} a la(s) ${new Date().toLocaleTimeString()}`
-    )
+    // console.log(
+    //     `Petición ${config.method.toUpperCase()} hecha a ${config.url} a la(s) ${new Date().toLocaleTimeString()}`
+    // )
     return config
   },
   error => {

@@ -11,11 +11,7 @@ function Auth() {
         const loggedInUser = localStorage.getItem("authenticated");
 
         if (loggedInUser) {
-
-            console.log("Logged in")
-
             setAuthenticated(true);
-
             navigate("/home")            
         }
 

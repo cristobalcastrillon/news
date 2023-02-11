@@ -7,15 +7,13 @@ import WeatherCard from "../components/WeatherCard";
 function Homepage() {
 
     let country = 'co'
-    const newsApiKey = '5a24644ba4464f08afa45ba41dabf7a4'
-    const newsGetURL = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${newsApiKey}`
+    const newsGetURL = `${process.env.REACT_APP_NEWS_BASE_URL}?country=${country}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
 
     // Iglesia La Ermita - Cali, Colombia
     // 3.4540491564690865, -76.53202689965575
     let lat = '3.45'
     let lon = '-76.53'
-    const weatherApiKey = 'f94107df80de82483c65aa2e29cb4eb0'
-    const weatherGetURL = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${weatherApiKey}`
+    const weatherGetURL = `${process.env.REACT_APP_WEATHER_BASE_URL}?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
 
     let newsList = useAxiosGet(newsGetURL)
     let weatherInfo = useAxiosGet(weatherGetURL)
